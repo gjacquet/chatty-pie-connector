@@ -237,7 +237,7 @@
 						<imageTag>${project.version}</imageTag>
 					</imageTags>
 					<serverId>docker</serverId>
-					<registryUrl>https://appdirect-opensource-docker-docker.bintray.io</registryUrl>
+					<registryUrl>https://appdirect-opensource-docker-docker.bintray.io/v2/</registryUrl>
 				</configuration>
 			</plugin>
 			<plugin>
