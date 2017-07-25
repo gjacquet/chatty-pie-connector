@@ -5,7 +5,7 @@
 		<username>${env.BINTRAY_USERNAME}</username>
 		<password>${env.BINTRAY_API_KEY}</password>
 		<configuration>
-			<email>partner.integrations@appdirect.com</email>
+			<email>open-source@appdirect.com</email>
 		</configuration>
 	</server>
 </servers>
