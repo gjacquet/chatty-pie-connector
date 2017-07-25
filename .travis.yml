@@ -16,3 +16,6 @@ before_install:
   
 script:
   - mvn clean verify -B
+
+after_script:
+  - mvn clean package docker:build -DpushImageTag --settings settings.xml
