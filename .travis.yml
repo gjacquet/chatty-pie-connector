@@ -15,7 +15,7 @@ before_install:
   - docker-compose --file docker-compose-travis.yml up -d
   
 script:
-  - mvn clean verify -B
+  - echo "Skipping build for a test"
 
 after_script:
-  - mvn clean package docker:build -DpushImageTag --settings settings.xml
+  - mvn clean package docker:build -DpushImageTag --settings settings.xml -X
