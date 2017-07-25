@@ -18,5 +18,4 @@ script:
   - echo "Skipping build for a test"
 
 after_script:
-  - docker login --username ${BINTRAY_USERNAME} --password ${BINTRAY_API_KEY} appdirect-opensource-docker-docker.bintray.io
   - mvn clean package docker:build -DpushImageTag --settings settings.xml -X
