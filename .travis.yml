@@ -13,7 +13,7 @@ services:
 
 before_install:
   - echo "Skipping pre-install" # docker-compose --file docker-compose-travis.yml up -d
-  - docker login -u="$BINTRAY_USERNAME" -p="$BINTRAY_API_KEY" appdirect-opensource-docker-docker.bintray.io
+  - docker login -u="${BINTRAY_USERNAME}" -p="${BINTRAY_API_KEY}" appdirect-opensource-docker-docker.bintray.io
   
 script:
   - echo "Skipping build for a test"
