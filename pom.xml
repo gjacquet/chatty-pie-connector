@@ -185,10 +185,6 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>pl.project13.maven</groupId>
-				<artifactId>git-commit-id-plugin</artifactId>
-			</plugin>
-			<plugin>
 				<groupId>com.querydsl</groupId>
 				<artifactId>querydsl-maven-plugin</artifactId>
 				<version>${query.dsl.version}</version>
@@ -235,12 +231,13 @@
 				<version>0.4.13</version>
 				<configuration>
 					<dockerDirectory>${project.basedir}</dockerDirectory>
-					<imageName>docker.appdirectondemand.com/chatty-pie-connector/chatty-pie-connector</imageName>
+					<imageName>appdirect-opensource-docker-docker.bintray.io/chatty-pie-connector</imageName>
+					<forceTags>true</forceTags>
 					<imageTags>
 						<imageTag>${project.version}</imageTag>
 					</imageTags>
 					<serverId>docker</serverId>
-					<registryUrl>https://docker.appdirectondemand.com/v2/</registryUrl>
+					<registryUrl>https://appdirect-opensource-docker-docker.bintray.io</registryUrl>
 				</configuration>
 			</plugin>
 			<plugin>
