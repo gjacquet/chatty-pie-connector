@@ -13,6 +13,7 @@ services:
 
 before_install:
   - docker-compose --file docker-compose-travis.yml up -d
+
 script:
    - mvn clean verify -B
 
