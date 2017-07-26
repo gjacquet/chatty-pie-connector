@@ -13,9 +13,9 @@ services:
 
 before_install:
   - docker-compose --file docker-compose-travis.yml up -d
-  - docker login -u="${BINTRAY_USERNAME}" -p="${BINTRAY_API_KEY}" appdirect-opensource-docker-docker.bintray.io
 script:
    - mvn clean verify -B
 
 after_script:
-  - mvn clean package docker:build -DpushImageTag --settings settings.xml -X
+  - docker login -u="${BINTRAY_USERNAME}" -p="${BINTRAY_API_KEY}" appdirect-opensource-docker-docker.bintray.io &&
+    mvn clean package docker:build -DpushImageTag --settings settings.xml -X
