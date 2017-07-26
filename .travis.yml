@@ -17,5 +17,6 @@ script:
    - mvn clean verify -B
 
 after_script:
-  - docker login -u="${BINTRAY_USERNAME}" -p="${BINTRAY_API_KEY}" appdirect-opensource-docker-docker.bintray.io &&
-    mvn clean package docker:build -DpushImage -DskipTests=true
+  - docker login -u="${BINTRAY_USERNAME}" -p="${BINTRAY_API_KEY}" appdirect-opensource-docker-docker.bintray.io && \
+    mvn clean package docker:build -DskipTests=true %% \
+    docker push appdirect-opensource-docker-docker.bintray.io/chatty-pie-connector:1.0.9-SNAPSHOT
